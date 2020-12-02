@@ -1,0 +1,26 @@
+.flexrow{
+    display: flex;
+    flex-direction:row 
+}
+body{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer{
+    opacity: 70%;
+    margin: 10px;
+}
+.big{
+    font-size: 90px;
+}
+img {
+    width: 250px;
+}    
+.maincontent{
+    flex-grow: 1;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css-files/style.css">
+    <link rel="icon" href="/images/img.png">
+</head>
+
+<body>
+    <div class="maincontent">
+
+        <h1 class="big">Weather</h1>
+        {{>header}}
+        <h1>{{title}}</h1>
+        <p>{{name}} {{source}}</p>
+        <form>
+            <input placeholder="Enter location">
+            <button>Search</button>
+        </form>
+        <p id="message-one"></p>
+        <p id="message-two"></p>
+    </div>
+    {{!-- <img src="/images/img.jpg" alt="image not found"> --}}
+    {{>footer}}
+    <script src="js-files/test.js"></script>
+</body>
+
+</html>
