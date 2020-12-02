@@ -1,5 +1,5 @@
 const needle = require('needle');
-const key = require('./key');
+const key = require('../../key');
 // const { weatherAPIkey } = require('./key');
 
 const weatherFunction = (long, lat, callback) => {

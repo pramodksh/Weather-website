@@ -1,5 +1,5 @@
 const needle = require('needle')
-const key = require('./key')
+const key = require('../../key')
 // const { GeoAPIkey } = require('./key')
 
 const geoFunction = (address,callback)=>{
