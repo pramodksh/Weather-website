@@ -1,7 +1,9 @@
 const needle = require('needle');
+const key = require('./key');
+// const { weatherAPIkey } = require('./key');
 
 const weatherFunction = (long, lat, callback) => {
-    const URL = 'api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&units=metric&appid=b013729da264a9f8bb365ba74e4f4c89&limit=1'
+    const URL = 'api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&units=metric&appid='+ weatherAPIkey +'&limit=1'
     needle.get(URL, (error, response, body) => {
         if (error) {
             callback(error,undefined);
