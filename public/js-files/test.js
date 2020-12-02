@@ -8,7 +8,7 @@ const messagetwo = document.querySelector('#message-two');
 
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()
-        fetch(`http://localhost:3000/api?address=${search.value}`).then((res)=>{
+        fetch(`/api?address=${search.value}`).then((res)=>{
             res.json().then((data)=>{
                 if(data.error){
                     console.log('Enter Correct Address')

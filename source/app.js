@@ -6,6 +6,8 @@ const geoCode = require('./utils/geocode')
 const weatherApp = require('./utils/weather')
 
 const app = express();
+const port = process.env.PORT || 3000;
+
 const viewsPath = path.join(__dirname, '../templets/views')
 const partialPath = path.join(__dirname, '../templets/partial')
 const publicDirPath = path.join(__dirname, '../public')
@@ -112,6 +114,6 @@ app.get('/welcome', (req, res) => {
     res.send("<h1>Hello World</h1>");
 });
 
-app.listen(3000, () => {
-    console.log("Running at port 3000");
+app.listen(port, () => {
+    console.log("Running at port "+ port);
 });
