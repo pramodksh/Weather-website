@@ -1,8 +1,12 @@
 const needle = require('needle')
-const { GeoAPIkey } = require('../../key')
+
+// if (process.env.GeoAPIkey == undefined) {
+//     require('../../key').GeoAPIkey;
+// }
+// const { GeoAPIkey } = require('../../key');
 
 const geoFunction = (address,callback)=>{
-    var key = process.env.GeoAPIkey || GeoAPIkey;
+    var key = process.env.GeoAPIkey || require('../../key').GeoAPIkey;
     const geocodeURL='https://api.mapbox.com/geocoding/v5/mapbox.places/'+ encodeURIComponent(address)+'.json?access_token='+ key +'&limit=1'
     
     needle.get(geocodeURL,{ json:true },(error,response,body)=>{
